@@ -45,5 +45,5 @@ Para instalar bun en tu sistema operativo, puedes hacerlo de dos formas:
   
 
 
-    ### 2 - Instalar bun en Linux:
-    - Instalar bun: [https://bun.sh/docs/installation](https://bun.sh/docs/installation)
+ ### 2 - Instalar bun en Linux:
+  - Instalar bun: [https://bun.sh/docs/installation](https://bun.sh/docs/installation)
