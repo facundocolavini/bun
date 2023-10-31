@@ -41,23 +41,26 @@ Para instalar bun en tu sistema operativo, podes hacerlo de dos formas:
 - **Instalar WSL**: [https://docs.microsoft.com/en-us/windows/wsl/install-win10](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 - **Asegurar que windows subsystem este activado en las windows features**:
 
-  ![Alt text](image-1.png)
+  ![image](https://github.com/facundocolavini/bun/assets/54385792/539e0276-43a1-4ede-9160-3be9d80f1b57)
+
 
 - **Agregar una distribución de Linux**: [https://docs.microsoft.com/en-us/windows/wsl/install-manual](https://docs.microsoft.com/en-us/windows/wsl/install-manual)
 
 - **Abrir la distribución de Ubuntu:**
   - Configurar nombre y password  para la configuración.
   
-  ![Distribucion](image.png)
-  
-  ![Alt text](image-2.png)
+  ![image](https://github.com/facundocolavini/bun/assets/54385792/e62383bb-4f6a-4def-b8b4-1c908b327b43)
+
+  ![image](https://github.com/facundocolavini/bun/assets/54385792/83d247af-cc5b-4f58-9e94-ad59184d0460)
+
 
   - **Crear carpeta del proyecto e instalar bun**:
     - cd/proyecto
     - sudo apt install unzip
     - curl -fsSL <https://bun.sh/install> | bash
   
-    ![Alt text](image-3.png)
+    ![image](https://github.com/facundocolavini/bun/assets/54385792/a0601c0b-343d-4fb0-a42c-aeada11346ed)
+
 
 ### 2 - Instalar bun en Linux
 
