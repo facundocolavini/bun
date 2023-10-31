@@ -1,4 +1,4 @@
-# facundo-colavini
+# bun-http-server
 
 To install dependencies:
 

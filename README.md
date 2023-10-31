@@ -32,6 +32,7 @@ bunx cowsay "Hello, world!"   # execute a package
 ## Instalación
 
 Para instalar bun en tu sistema operativo, podes hacerlo de dos formas:
+Hay una forma de utilizar bun con docker pero es experimental de momento.
 
 ### 1 - Instalar bun en Windows
 
@@ -66,8 +67,35 @@ Para instalar bun en tu sistema operativo, podes hacerlo de dos formas:
 
 - Instalar bun: [https://bun.sh/docs/installation](https://bun.sh/docs/installation)
 
+# Packages Manager
 
-# Plantillas (Templating)
+El CLI de Bun contiene un administrador de paquetes compatible con Node.js diseñado para ser un reemplazo para npm, yarn y pnpm es considerablemente más rápido. Es una herramienta independiente que funcionará en proyectos de Node.js preexistentes.Si nuestro proyecto tiene un package.json, **bun install** puede ayudarte a acelerar tu flujo de trabajo.
+
+  ```bash
+  bun add figlet 
+  bun add -d @types/figlet 
+  bun remove 
+  bun update 
+  bun link
+  bun pm
+  ```
+  # Lifecycle scripts:
+  A diferencia de otros clientes de npm, Bun no ejecuta scripts de ciclo de vida arbitrarios como postinstall para las dependencias instaladas. Ejecutar scripts arbitrarios representa un posible riesgo de seguridad.
+
+  Para indicar a Bun que permita scripts del ciclo de vida para un paquete en particular, agrega el paquete a trustedDependencies en tu archivo package.json.
+  
+  # Workspaces:
+
+  Bun admite espacios de trabajo (workspaces) en el archivo package.json. Los espacios de trabajo facilitan el desarrollo de software complejo como un monorepo que consiste en varios paquetes independientes. Esta funcionalidad permite gestionar y organizar múltiples paquetes dentro del mismo repositorio, lo que simplifica el proceso de desarrollo y la gestión de dependencias en proyectos grandes y complejos.
+  
+  Beneficios de usar Workspaces:
+  El código puede dividirse en partes lógicas. Si un paquete depende de otro, simplemente puedes agregarlo como una dependencia en package.json. Si el paquete b depende de a, bun install instalará tu paquete local en el directorio packages/a en node_modules en lugar de descargarlo del registro npm.
+
+  Las dependencias pueden ser deduplicadas. Si a y b comparten una dependencia común, esta será elevada (hoisted) al directorio raíz node_modules. Esto reduce el uso redundante de espacio en disco y minimiza los problemas de "infierno de dependencias" asociados con tener múltiples versiones de un paquete instaladas simultáneamente.
+
+  - [Como podemos hacer workspaces](https://bun.sh/guides/install/workspaces) 
+   
+  # Plantillas (Templating)
 
   ## Bun init 
 
