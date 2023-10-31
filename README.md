@@ -98,13 +98,14 @@ Para instalar bun en tu sistema operativo, podes hacerlo de dos formas:
 
   Templates disponibles:
   
-  Suponiendo que no tengas un template local con el mismo nombre, este comando descargará y ejecutará el paquete create-<template> desde npm.
-
   ![image](https://github.com/facundocolavini/bun/assets/54385792/967f2f3c-14de-4037-ba87-c3737da6b5bc)
+
+  ## Desde npm 
+  Suponiendo que no tengas un template local con el mismo nombre, este comando descargará y ejecutará el paquete create-<template> desde npm.
 
   ```bash
   
-  Wbun create <template> [<destination>] // Es identico a npm install create-<template>
+  bun create <template> [<destination>] // Es identico a npm install create-<template>
   
   // Ejemplo estas 2 lineas son iguales y hacen lo mismo:
   
@@ -112,5 +113,10 @@ Para instalar bun en tu sistema operativo, podes hacerlo de dos formas:
   bunx create-remix
   
   ```
-
-
+  ## Desde Guithub
+  Podemos descargar repositorios de Github a nuestro disco.
+  
+  ```bash
+  bun create <user>/<repo>
+  bun create github.com/<user>/<repo>
+  ```
