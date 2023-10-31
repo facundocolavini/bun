@@ -95,3 +95,6 @@ Para instalar bun en tu sistema operativo, podes hacerlo de dos formas:
   Crea un nuevo proyecto Bun con bun create. Este es un comando flexible que se puede utilizar para crear un nuevo proyecto con un paquete npm create-<template>, un repositorio de GitHub o un template local.
 
   Si es un proyecto vacio se recomienda crearlo con **bun init**.
+
+  ![image](https://github.com/facundocolavini/bun/assets/54385792/3f37f27c-e5e0-447a-94a4-b7761d212e9c)
+
