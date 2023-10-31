@@ -65,3 +65,29 @@ Para instalar bun en tu sistema operativo, podes hacerlo de dos formas:
 ### 2 - Instalar bun en Linux
 
 - Instalar bun: [https://bun.sh/docs/installation](https://bun.sh/docs/installation)
+
+
+# Plantillas (Templating)
+
+  ## Bun init 
+
+  Crear un proyecto Bun vacío con el comando interactivo bun init.
+
+  ```bash
+  bun init            // bun init te ayuda a empezar con un proyecto mínimo.
+  bun init -y         // Para aceptar automáticamente las configuraciones predeterminadas. 
+  bun run index.ts    // Punto de entrada.
+  ```
+
+
+
+  **/bun-initial** 
+
+  + index.ts
+  + .gitignore
+  + tsconfig.json (para el autocompletado del editor)
+  + README.md
+ 
+  ## Bun create 
+
+
