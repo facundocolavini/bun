@@ -87,7 +87,9 @@ Para instalar bun en tu sistema operativo, podes hacerlo de dos formas:
   + .gitignore
   + tsconfig.json (para el autocompletado del editor)
   + README.md
- 
+
+  ![image](https://github.com/facundocolavini/bun/assets/54385792/cd21f49c-76ca-4608-bd2d-c3e2d4385b1d)
+
   ## Bun create 
 
 
