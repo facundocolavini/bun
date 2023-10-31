@@ -120,3 +120,21 @@ Para instalar bun en tu sistema operativo, podes hacerlo de dos formas:
   bun create <user>/<repo>
   bun create github.com/<user>/<repo>
   ```
+  Opcionalmente, puedes especificar un nombre para la carpeta de destino. Si no se especifica ningún destino, se usará el nombre del repositorio.
+  
+  ```bash
+  // https://github.com/facundocolavini/bun.git
+
+  bun create <user>/<repo> mydir
+  bun create github.com/<user>/<repo> mydir
+  ```
+
+  Bun realizará los siguientes pasos:
+
+  - Descargar el template.
+  - Copiar todos los archivos del template en la carpeta de destino.
+  - Instalar las dependencias con bun install.
+  - Inicializar un nuevo repositorio Git. Puedes evitar esto con la bandera --no-git.
+  - Ejecutar el script de inicio configurado en el template, si está definido.
+  
+Por defecto, Bun no sobrescribirá archivos existentes. Usa la bandera --force para sobrescribir archivos existentes si es necesario.
