@@ -109,12 +109,18 @@ El CLI de Bun contiene un administrador de paquetes compatible con Node.js dise�
   --watch                     To run a file in watch mode, use the --watch flag.
   --smol                      In memory-constrained environments, use the --smol flag to reduce memory usage at a cost to performance.
   ```
-  # Lifecycle scripts:
+
+# Lifecycle scripts:
   A diferencia de otros clientes de npm, Bun no ejecuta scripts de ciclo de vida arbitrarios como postinstall para las dependencias instaladas. Ejecutar scripts arbitrarios representa un posible riesgo de seguridad.
 
-  Para indicar a Bun que permita scripts del ciclo de vida para un paquete en particular, agrega el paquete a trustedDependencies en tu archivo package.json.
+  Para indicar a Bun que permita scripts del ciclo de vida para un paquete en particular, agrega el paquete a trustedDependencies en tu archivo  package.json.
   
-  # Workspaces:
+  - preinstall: Se ejecuta antes de que el paquete sea instalado.
+  - postinstall: Se ejecuta después de que el paquete es instalado.
+  - preuninstall: Se ejecuta antes de que el paquete sea desinstalado.
+  - prepublishOnly: Se ejecuta antes de que el paquete sea publicado, pero solo cuando estás ejecutando npm publish.
+  
+# Workspaces:
 
   Bun admite espacios de trabajo (workspaces) en el archivo package.json. Los espacios de trabajo facilitan el desarrollo de software complejo como un monorepo que consiste en varios paquetes independientes. Esta funcionalidad permite gestionar y organizar múltiples paquetes dentro del mismo repositorio, lo que simplifica el proceso de desarrollo y la gestión de dependencias en proyectos grandes y complejos.
   
@@ -125,7 +131,7 @@ El CLI de Bun contiene un administrador de paquetes compatible con Node.js dise�
 
   - [Como podemos hacer workspaces](https://bun.sh/guides/install/workspaces) 
    
-  # Plantillas (Templating)
+# Plantillas (Templating)
 
   ## Bun init 
 
@@ -196,5 +202,39 @@ El CLI de Bun contiene un administrador de paquetes compatible con Node.js dise�
 Por defecto, Bun no sobrescribirá archivos existentes. Usa la bandera --force para sobrescribir archivos existentes si es necesario.
 
 # Typescript 
+  
   Bun soporta nativamente TypeScript desde el principio. Todos los archivos son transpilados al vuelo por el rápido transpilador nativo de Bun antes de ser ejecutados. Similar a otras herramientas de construcción, Bun no realiza la comprobación de tipos; simplemente elimina las anotaciones de tipo del archivo.
 
+# Variables de entorno 
+
+  Bun lee automáticamente tus archivos `.env` y proporciona formas idiomáticas de leer y escribir tus variables de entorno programáticamente. Además, algunos aspectos del comportamiento en tiempo de ejecución de Bun pueden ser configurados mediante variables de entorno específicas de Bun. Esto facilita la gestión de las variables de entorno y la configuración de la aplicación al utilizar Bun como herramienta de desarrollo.
+
+  ## Configurar variables de entorno
+
+  Bun lee automáticamente los siguientes archivos (listados en orden de creciente precedencia):
+
+  **.env.defaults**
+  **.env.local**
+  **.env.development, .env.test, .env.production, respectivamente**
+  **.env.local.js**
+  **.env.local.json**
+  **.env.local.yaml, .env.local.yml, respectivamente**
+  **.env.local.toml**
+  Se pueden modificar el valor de una variable de entorno de la siguiente forma
+    
+  ```bash
+  process.env.FOO = "hello";
+  o
+  FOO=helloworld bun run dev
+    
+  ```
+
+  Esto significa que las variables de entorno definidas en archivos con una precedencia más alta sobrescribirán las definidas en archivos con una precedencia más baja.
+
+  Se podra leer las variables de entorno de la siguiente forma:
+
+   ```bash
+  process.env.API_TOKEN; // => "secret"
+  o 
+  Bun.env.API_TOKEN; // => "secret"
+  ```

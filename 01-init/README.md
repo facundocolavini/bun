@@ -1,4 +1,4 @@
-# bun-http-server
+# 01-init
 
 To install dependencies:
 
