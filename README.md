@@ -1,11 +1,8 @@
-# Bun.sh
-
 ## Introducción
-
 Este repositorio aprenderemos las bases y funcionamientos que tiene bun 1.0.
 
 Nos basaremos de la documentación oficial de bun, la cual puedes encontrar:
-[https://bun.sh/docs](https://bun.sh/docs)
+- [https://bun.sh/docs](https://bun.sh/docs)
 
 ## Que vamos a aprender en este repositorio
 
