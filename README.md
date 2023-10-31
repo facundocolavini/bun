@@ -96,5 +96,6 @@ Para instalar bun en tu sistema operativo, podes hacerlo de dos formas:
 
   Si es un proyecto vacio se recomienda crearlo con **bun init**.
 
-  ![image](https://github.com/facundocolavini/bun/assets/54385792/3f37f27c-e5e0-447a-94a4-b7761d212e9c)
+  ![image](https://github.com/facundocolavini/bun/assets/54385792/967f2f3c-14de-4037-ba87-c3737da6b5bc)
+
 
