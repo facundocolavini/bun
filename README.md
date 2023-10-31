@@ -10,6 +10,22 @@ Nos basaremos de la documentación oficial de bun, la cual puedes encontrar:
 
 - Repasaremos la documentación oficial de bun, y aprenderemos a instalar bun en nuestro sistema operativo (Windows o Linux).
 - Veremos la API de bun, y a crear pequeños proyectos con bun.
+ 
+- Bun init
+- bun run 
+- Bun server
+- watch mode
+- hot reload
+- Variables de entorno (env)
+- Bun scripts
+- Simple Routes
+- Node Cores modules
+- File I/O API
+- Testing
+- Bundler
+- Bun build
+- Bundler watch mode
+- React & JSX
 
 ## ¿Qué es bun.sh?
 
@@ -71,13 +87,27 @@ Hay una forma de utilizar bun con docker pero es experimental de momento.
 
 El CLI de Bun contiene un administrador de paquetes compatible con Node.js diseñado para ser un reemplazo para npm, yarn y pnpm es considerablemente más rápido. Es una herramienta independiente que funcionará en proyectos de Node.js preexistentes.Si nuestro proyecto tiene un package.json, **bun install** puede ayudarte a acelerar tu flujo de trabajo.
 
+  ## Correr flags y packages json: 
+
+  bun [bun flags] run <script> [script flags] 
+
   ```bash
-  bun add figlet 
-  bun add -d @types/figlet 
-  bun remove 
-  bun update 
-  bun link
-  bun pm
+  bun add zod@latest          To add a particular package
+  bun add -d @types/figlet    Add types to devDependecies 
+  bun add --dev @types/react  Add types to devDependecies 
+  bun remove                  To remove a dependency
+  bun update                  To update all dependencies to the latest version
+  bun link                    Use bun link in a local directory to register the current package as a "linkable" package.
+  bun pm                      The bun pm command group provides a set of utilities for working with Bun's package manager.
+
+  CLI flags
+
+  --force	                    Overwrite existing files
+  --no-install	              Skip installing node_modules & tasks
+  --no-git	                  Don’t initialize a git repository
+  --open	                    Start & open in-browser after finish
+  --watch                     To run a file in watch mode, use the --watch flag.
+  --smol                      In memory-constrained environments, use the --smol flag to reduce memory usage at a cost to performance.
   ```
   # Lifecycle scripts:
   A diferencia de otros clientes de npm, Bun no ejecuta scripts de ciclo de vida arbitrarios como postinstall para las dependencias instaladas. Ejecutar scripts arbitrarios representa un posible riesgo de seguridad.
@@ -106,8 +136,6 @@ El CLI de Bun contiene un administrador de paquetes compatible con Node.js dise�
   bun init -y         // Para aceptar automáticamente las configuraciones predeterminadas. 
   bun run index.ts    // Punto de entrada.
   ```
-
-
 
   **/bun-initial** 
 
@@ -166,3 +194,7 @@ El CLI de Bun contiene un administrador de paquetes compatible con Node.js dise�
   - Ejecutar el script de inicio configurado en el template, si está definido.
   
 Por defecto, Bun no sobrescribirá archivos existentes. Usa la bandera --force para sobrescribir archivos existentes si es necesario.
+
+# Typescript 
+  Bun soporta nativamente TypeScript desde el principio. Todos los archivos son transpilados al vuelo por el rápido transpilador nativo de Bun antes de ser ejecutados. Similar a otras herramientas de construcción, Bun no realiza la comprobación de tipos; simplemente elimina las anotaciones de tipo del archivo.
+
