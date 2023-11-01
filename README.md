@@ -296,7 +296,7 @@ Bun admite archivos .jsx y .tsx de forma predeterminada. El transpilador interno
 
  Se respetan las siguientes opciones del compilador:
   
-- jsx: Cómo se transforman internamente las construcciones JSX a JavaScript estándar.
-- jsxFactory: El nombre de función utilizado para representar las construcciones JSX. El valor predeterminado es "createElement". Esto es útil para bibliotecas como Preact que utilizan un nombre de función diferente ("h").
-- jsxFragmentFactory: El nombre de la función utilizado para representar fragmentos JSX como <>Hello</>; solo aplicable cuando jsx es react. El valor predeterminado es "Fragment".
-- jsxImportSource: El módulo desde el cual se importará la función del fabricante de componentes (createElement, jsx, jsxDEV, etc.). El valor predeterminado es "react". Esto será necesario normalmente al utilizar una biblioteca de componentes como Preact.
+- **jsx**: Cómo se transforman internamente las construcciones JSX a JavaScript estándar.
+- **jsxFactory**: El nombre de función utilizado para representar las construcciones JSX. El valor predeterminado es "createElement". Esto es útil para bibliotecas como Preact que utilizan un nombre de función diferente ("h").
+- **jsxFragmentFactory**: El nombre de la función utilizado para representar fragmentos JSX como <>Hello</>; solo aplicable cuando jsx es react. El valor predeterminado es "Fragment".
+- **jsxImportSource**: El módulo desde el cual se importará la función del fabricante de componentes (createElement, jsx, jsxDEV, etc.). El valor predeterminado es "react". Esto será necesario normalmente al utilizar una biblioteca de componentes como Preact.
