@@ -5,6 +5,10 @@
   "devDependencies": {
     "bun-types": "latest"
   },
+  "scripts": {
+    "build": " bun --watch build ./crm.ts --outdir ../../public",
+    "start": "bun start"
+  },
   "peerDependencies": {
     "typescript": "^5.0.0"
   }
