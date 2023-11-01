@@ -1,19 +1,11 @@
 Bun.serve({
-    port: 8080, // defaults to $BUN_PORT, $PORT, $NODE_PORT otherwise 3000
+    port: 3000, // defaults to $BUN_PORT, $PORT, $NODE_PORT otherwise 3000
     fetch(req) {
       const url = new URL(req.url);
 
       /* Paginas */
       if(url.pathname === "/"){
-        return new Response(`
-        <html>
-        <head>
-        <script defer src='/assets/crm.js'></script>
-        </head>
-         <body>
-         <h1>Hola desde bun</h1>
-         </body>
-        </html>`, {
+        return new Response(Bun.file('./front/views/index.html'), {
           headers: {
               "Content-type": "text/html",
               },
@@ -24,6 +16,16 @@ Bun.serve({
         // Devolvemos el archivo crm.js
         return new Response(Bun.file("./public/crm.js"), {});
       }
+
+      /* CSS files */
+      if(url.pathname === "/assets/output.css"){
+        return new Response(Bun.file('./public/output.css'), {
+          headers: {
+              "Content-type": "text/css",
+              },
+        });
+      }
+
       return new Response("Not found", {
         status: 404,
         statusText: "not found",

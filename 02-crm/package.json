@@ -1,13 +1,15 @@
 {
   "name": "02-crm",
-  "module": "index.ts",
+  "module": "server.ts",
   "type": "module",
   "devDependencies": {
     "bun-types": "latest"
   },
   "scripts": {
-    "build": " bun --watch build ./crm.ts --outdir ../../public",
-    "start": "bun start"
+    "front": "bun --watch build ./src/crm.ts --outdir ../../public",
+    "server": "bun --hot run src/server.ts",
+    "build:tailwind": "bunx tailwindcss -c ./front/tailwind.config.cjs -i front/styles.css -o public/output.css --watch"
+
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
