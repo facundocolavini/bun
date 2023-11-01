@@ -86,9 +86,9 @@ El CLI de Bun contiene un administrador de paquetes compatible con Node.js dise√
 
 ## Correr flags y packages json
 
-  bun [bun flags] run <script> [script flags]
-
   ```bash
+  bun [bun flags] run <script> [script flags]
+  
   bun add zod@latest          To add a particular package
   bun add -d @types/figlet    Add types to devDependecies 
   bun add --dev @types/react  Add types to devDependecies 
@@ -152,7 +152,7 @@ El CLI de Bun contiene un administrador de paquetes compatible con Node.js dise√
 
 ## Bun create
 
-  Crea un nuevo proyecto Bun con bun create. Este es un comando flexible que se puede utilizar para crear un nuevo proyecto con un paquete npm create-<template>, un repositorio de GitHub o un template local.
+  Crea un nuevo proyecto Bun con bun create. Este es un comando flexible que se puede utilizar para crear un nuevo proyecto con un paquete ```npm create-<template>```, un repositorio de GitHub o un template local.
 
   Si es un proyecto vacio se recomienda crearlo con **bun init**.
 
@@ -162,11 +162,11 @@ El CLI de Bun contiene un administrador de paquetes compatible con Node.js dise√
 
 ## Desde npm
 
-  Suponiendo que no tengas un template local con el mismo nombre, este comando descargar√° y ejecutar√° el paquete create-<template> desde npm.
+  Suponiendo que no tengas un template local con el mismo nombre, este comando descargar√° y ejecutar√° el paquete ```create-<template>``` desde npm.
 
   ```bash
   
-  bun create <template> [<destination>] // Es identico a npm install create-<template>
+  # bun create <template> [<destination>] // Es identico a npm install create-<template>
   
   // Ejemplo estas 2 lineas son iguales y hacen lo mismo:
   
