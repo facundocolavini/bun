@@ -1,0 +1,22 @@
+{
+  "name": "02-crm",
+  "module": "server.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/react-dom": "^18.2.14",
+    "bun-types": "latest"
+  },
+  "scripts": {
+    "front": "bun --watch build ./src/main.tsx --outdir ../../public",
+    "server": "bun --hot run src/server.ts",
+    "build:tailwind": "bunx tailwindcss -c ./front/tailwind.config.cjs -i front/styles.css -o public/output.css --watch"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.2.2"
+  }
+}
