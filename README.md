@@ -10,9 +10,9 @@ Nos basaremos de la documentación oficial de bun, la cual puedes encontrar:
 
 - Repasaremos la documentación oficial de bun, y aprenderemos a instalar bun en nuestro sistema operativo (Windows o Linux).
 - Veremos la API de bun, y a crear pequeños proyectos con bun.
- 
+
 - Bun init
-- bun run 
+- bun run
 - Bun server
 - watch mode
 - hot reload
@@ -60,7 +60,6 @@ Hay una forma de utilizar bun con docker pero es experimental de momento.
 
   ![image](https://github.com/facundocolavini/bun/assets/54385792/539e0276-43a1-4ede-9160-3be9d80f1b57)
 
-
 - **Agregar una distribución de Linux**: [https://docs.microsoft.com/en-us/windows/wsl/install-manual](https://docs.microsoft.com/en-us/windows/wsl/install-manual)
 
 - **Abrir la distribución de Ubuntu:**
@@ -70,14 +69,12 @@ Hay una forma de utilizar bun con docker pero es experimental de momento.
 
   ![image](https://github.com/facundocolavini/bun/assets/54385792/83d247af-cc5b-4f58-9e94-ad59184d0460)
 
-
   - **Crear carpeta del proyecto e instalar bun**:
     - cd/proyecto
     - sudo apt install unzip
     - curl -fsSL <https://bun.sh/install> | bash
   
     ![image](https://github.com/facundocolavini/bun/assets/54385792/a0601c0b-343d-4fb0-a42c-aeada11346ed)
-
 
 ### 2 - Instalar bun en Linux
 
@@ -87,9 +84,9 @@ Hay una forma de utilizar bun con docker pero es experimental de momento.
 
 El CLI de Bun contiene un administrador de paquetes compatible con Node.js diseñado para ser un reemplazo para npm, yarn y pnpm es considerablemente más rápido. Es una herramienta independiente que funcionará en proyectos de Node.js preexistentes.Si nuestro proyecto tiene un package.json, **bun install** puede ayudarte a acelerar tu flujo de trabajo.
 
-  ## Correr flags y packages json: 
+## Correr flags y packages json
 
-  bun [bun flags] run <script> [script flags] 
+  bun [bun flags] run <script> [script flags]
 
   ```bash
   bun add zod@latest          To add a particular package
@@ -102,25 +99,26 @@ El CLI de Bun contiene un administrador de paquetes compatible con Node.js dise�
 
   CLI flags
 
-  --force	                    Overwrite existing files
-  --no-install	              Skip installing node_modules & tasks
-  --no-git	                  Don’t initialize a git repository
-  --open	                    Start & open in-browser after finish
+  --force                     Overwrite existing files
+  --no-install                Skip installing node_modules & tasks
+  --no-git                    Don’t initialize a git repository
+  --open                      Start & open in-browser after finish
   --watch                     To run a file in watch mode, use the --watch flag.
   --smol                      In memory-constrained environments, use the --smol flag to reduce memory usage at a cost to performance.
   ```
 
-# Lifecycle scripts:
+# Lifecycle scripts
+
   A diferencia de otros clientes de npm, Bun no ejecuta scripts de ciclo de vida arbitrarios como postinstall para las dependencias instaladas. Ejecutar scripts arbitrarios representa un posible riesgo de seguridad.
 
   Para indicar a Bun que permita scripts del ciclo de vida para un paquete en particular, agrega el paquete a trustedDependencies en tu archivo  package.json.
   
-  - preinstall: Se ejecuta antes de que el paquete sea instalado.
-  - postinstall: Se ejecuta después de que el paquete es instalado.
-  - preuninstall: Se ejecuta antes de que el paquete sea desinstalado.
-  - prepublishOnly: Se ejecuta antes de que el paquete sea publicado, pero solo cuando estás ejecutando npm publish.
+- preinstall: Se ejecuta antes de que el paquete sea instalado.
+- postinstall: Se ejecuta después de que el paquete es instalado.
+- preuninstall: Se ejecuta antes de que el paquete sea desinstalado.
+- prepublishOnly: Se ejecuta antes de que el paquete sea publicado, pero solo cuando estás ejecutando npm publish.
   
-# Workspaces:
+# Workspaces
 
   Bun admite espacios de trabajo (workspaces) en el archivo package.json. Los espacios de trabajo facilitan el desarrollo de software complejo como un monorepo que consiste en varios paquetes independientes. Esta funcionalidad permite gestionar y organizar múltiples paquetes dentro del mismo repositorio, lo que simplifica el proceso de desarrollo y la gestión de dependencias en proyectos grandes y complejos.
   
@@ -129,11 +127,11 @@ El CLI de Bun contiene un administrador de paquetes compatible con Node.js dise�
 
   Las dependencias pueden ser deduplicadas. Si a y b comparten una dependencia común, esta será elevada (hoisted) al directorio raíz node_modules. Esto reduce el uso redundante de espacio en disco y minimiza los problemas de "infierno de dependencias" asociados con tener múltiples versiones de un paquete instaladas simultáneamente.
 
-  - [Como podemos hacer workspaces](https://bun.sh/guides/install/workspaces) 
-   
+- [Como podemos hacer workspaces](https://bun.sh/guides/install/workspaces)
+
 # Plantillas (Templating)
 
-  ## Bun init 
+## Bun init
 
   Crear un proyecto Bun vacío con el comando interactivo bun init.
 
@@ -143,16 +141,16 @@ El CLI de Bun contiene un administrador de paquetes compatible con Node.js dise�
   bun run index.ts    // Punto de entrada.
   ```
 
-  **/bun-initial** 
+  **/bun-initial**
 
-  + index.ts
-  + .gitignore
-  + tsconfig.json (para el autocompletado del editor)
-  + README.md
+- index.ts
+- .gitignore
+- tsconfig.json (para el autocompletado del editor)
+- README.md
 
   ![image](https://github.com/facundocolavini/bun/assets/54385792/cd21f49c-76ca-4608-bd2d-c3e2d4385b1d)
 
-  ## Bun create 
+## Bun create
 
   Crea un nuevo proyecto Bun con bun create. Este es un comando flexible que se puede utilizar para crear un nuevo proyecto con un paquete npm create-<template>, un repositorio de GitHub o un template local.
 
@@ -162,7 +160,8 @@ El CLI de Bun contiene un administrador de paquetes compatible con Node.js dise�
   
   ![image](https://github.com/facundocolavini/bun/assets/54385792/967f2f3c-14de-4037-ba87-c3737da6b5bc)
 
-  ## Desde npm 
+## Desde npm
+
   Suponiendo que no tengas un template local con el mismo nombre, este comando descargará y ejecutará el paquete create-<template> desde npm.
 
   ```bash
@@ -175,13 +174,19 @@ El CLI de Bun contiene un administrador de paquetes compatible con Node.js dise�
   bunx create-remix
   
   ```
-  ## Desde Guithub
+
+## Desde Guithub
+
   Podemos descargar repositorios de Github a nuestro disco.
+  Algunos templates creados por la comunidad de bun :
+
+  <https://github.com/bun-community/create-templates>
   
   ```bash
   bun create <user>/<repo>
   bun create github.com/<user>/<repo>
   ```
+
   Opcionalmente, puedes especificar un nombre para la carpeta de destino. Si no se especifica ningún destino, se usará el nombre del repositorio.
   
   ```bash
@@ -193,23 +198,65 @@ El CLI de Bun contiene un administrador de paquetes compatible con Node.js dise�
 
   Bun realizará los siguientes pasos:
 
-  - Descargar el template.
-  - Copiar todos los archivos del template en la carpeta de destino.
-  - Instalar las dependencias con bun install.
-  - Inicializar un nuevo repositorio Git. Puedes evitar esto con la bandera --no-git.
-  - Ejecutar el script de inicio configurado en el template, si está definido.
+- Descargar el template.
+- Copiar todos los archivos del template en la carpeta de destino.
+- Instalar las dependencias con bun install.
+- Inicializar un nuevo repositorio Git. Puedes evitar esto con la bandera --no-git.
+- Ejecutar el script de inicio configurado en el template, si está definido.
   
 Por defecto, Bun no sobrescribirá archivos existentes. Usa la bandera --force para sobrescribir archivos existentes si es necesario.
 
-# Typescript 
+# Typescript
   
   Bun soporta nativamente TypeScript desde el principio. Todos los archivos son transpilados al vuelo por el rápido transpilador nativo de Bun antes de ser ejecutados. Similar a otras herramientas de construcción, Bun no realiza la comprobación de tipos; simplemente elimina las anotaciones de tipo del archivo.
 
-# Variables de entorno 
+## Configuraciónes necesarias
+
+  ```bash
+    bun add -d bun-types #  Install the TypeScript definitions for Bun's built-in APIs, install bun-types.
+  ```
+
+  Bun admite cosas como la espera en el nivel superior, JSX y las importaciones .ts extendidas, las cuales TypeScript no permite por defecto. A continuación, se muestra un conjunto de compilerOptions recomendadas para un proyecto de Bun, para que puedas utilizar estas características sin ver advertencias del compilador de TypeScript.
+
+  ```bash
+{
+  "compilerOptions": {
+    // add Bun type definitions
+    "types": ["bun-types"],
+
+    // enable latest features
+    "lib": ["ESNext"],
+    "module": "esnext",
+    "target": "esnext",
+
+    // if TS 5.x+
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "moduleDetection": "force",
+    // if TS 4.x or earlier
+    // "moduleResolution": "nodenext",
+
+    "jsx": "react-jsx", // support JSX
+    "allowJs": true, // allow importing `.js` from `.ts`
+
+    // best practices
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "composite": true,
+    "downlevelIteration": true,
+    "allowSyntheticDefaultImports": true
+  }
+}
+
+  ```
+
+# Variables de entorno
 
   Bun lee automáticamente tus archivos `.env` y proporciona formas idiomáticas de leer y escribir tus variables de entorno programáticamente. Además, algunos aspectos del comportamiento en tiempo de ejecución de Bun pueden ser configurados mediante variables de entorno específicas de Bun. Esto facilita la gestión de las variables de entorno y la configuración de la aplicación al utilizar Bun como herramienta de desarrollo.
 
-  ## Configurar variables de entorno
+## Configurar variables de entorno
 
   Bun lee automáticamente los siguientes archivos (listados en orden de creciente precedencia):
 
@@ -221,7 +268,7 @@ Por defecto, Bun no sobrescribirá archivos existentes. Usa la bandera --force p
   **.env.local.yaml, .env.local.yml, respectivamente**
   **.env.local.toml**
   Se pueden modificar el valor de una variable de entorno de la siguiente forma
-    
+
   ```bash
   process.env.FOO = "hello";
   o
@@ -238,3 +285,18 @@ Por defecto, Bun no sobrescribirá archivos existentes. Usa la bandera --force p
   o 
   Bun.env.API_TOKEN; // => "secret"
   ```
+
+# JSX/TSX
+  
+Bun admite archivos .jsx y .tsx de forma predeterminada. El transpilador interno de Bun convierte la sintaxis JSX a JavaScript estándar antes de la ejecución.
+
+## Configuración
+
+ Bun lee tus archivos de configuración tsconfig.json o jsconfig.json para determinar cómo realizar la transformación JSX internamente. Para evitar el uso de alguno de estos, las siguientes opciones también se pueden definir en bunfig.toml.
+
+ Se respetan las siguientes opciones del compilador:
+  
+- jsx: Cómo se transforman internamente las construcciones JSX a JavaScript estándar.
+- jsxFactory: El nombre de función utilizado para representar las construcciones JSX. El valor predeterminado es "createElement". Esto es útil para bibliotecas como Preact que utilizan un nombre de función diferente ("h").
+- jsxFragmentFactory: El nombre de la función utilizado para representar fragmentos JSX como <>Hello</>; solo aplicable cuando jsx es react. El valor predeterminado es "Fragment".
+- jsxImportSource: El módulo desde el cual se importará la función del fabricante de componentes (createElement, jsx, jsxDEV, etc.). El valor predeterminado es "react". Esto será necesario normalmente al utilizar una biblioteca de componentes como Preact.
