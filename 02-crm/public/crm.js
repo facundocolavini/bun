@@ -8,12 +8,15 @@ function assertDefined(value, message) {
 var state = {
   stages: [
     "New Candidate",
-    "Waiting for Reply",
-    "Screening (Recruiter)"
+    "Esperando Respuestas",
+    "Selecci\xF3n (Reclutador)"
   ]
 };
 var root = document.getElementById("crm");
 assertDefined(root, "root debe ser definido");
-console.log(root);
+root.className = "flex";
 for (const stage of state.stages) {
+  const _div = document.createElement("div");
+  _div.innerText = stage;
+  root.appendChild(_div);
 }
