@@ -1,9 +1,12 @@
 import React from 'react';
+import { renderToReadableStream } from 'react-dom/server';
 
-const ContactPage = () => {
+const ContactPage = ({name='Facundo'}) => {
+  
   return (
-    <div>ContactPage</div>
+    <div>ContactPage {name}</div>
   )
 }
+
 
 export default ContactPage;

@@ -1,0 +1,19 @@
+{
+  "name": "05-react-ssr-routing",
+  "module": "index.tsx",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch dev.tsx"
+  },
+  "devDependencies": {
+    "@types/react-dom": "^18.2.14",
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "react-dom": "^18.2.0"
+  }
+}

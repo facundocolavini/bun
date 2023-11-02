@@ -1,3 +1,4 @@
+import { renderToReadableStream } from "react-dom/server";
 
 interface Props {
  name: string;
@@ -5,10 +6,14 @@ interface Props {
 const HomePage = ({name}:Props) => {
   return (
     <>
-    <h1>Home {name} 
+    <h1>Home Page {name} 
         </h1>
    </>
   )
 }
+ await renderToReadableStream(
+  <HomePage name="Hello from server!" />,
+);
 
-export default HomePage
+export default HomePage;
+

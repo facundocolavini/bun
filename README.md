@@ -221,7 +221,6 @@ Por defecto, Bun no sobrescribirá archivos existentes. Usa la bandera --force p
   ```bash
 {
   "compilerOptions": {
-    // add Bun type definitions
     "types": ["bun-types"],
 
     // enable latest features
