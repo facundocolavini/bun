@@ -51,6 +51,7 @@ function serveFromDir(config: {
 
 export default {
   async fetch(request) {
+    
     const match = srcRouter.match(request);
     if (match) {
       const builtMatch = buildRouter.match(request);
@@ -80,6 +81,15 @@ export default {
     if (publicResponse) return publicResponse;
 
     // check built assets
+
+     /* CSS files */
+     if(reqPath === "/assets/output.css"){
+      return new Response(Bun.file('./public/output.css'), {
+        headers: {
+            "Content-type": "text/css",
+            },
+      });
+    }
     const buildResponse = serveFromDir({directory: BUILD_DIR, path: reqPath});
     if (buildResponse) return buildResponse;
     const pagesResponse = serveFromDir({
