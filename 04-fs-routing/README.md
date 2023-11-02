@@ -1,15 +1,14 @@
 # 04-fs-routing
 
-To install dependencies:
+Manejamos el routing que nos ofrece bun de acuerdo a la estructura de carpetas.
 
 ```bash
-bun install
+/pages 
+ |- / HomePage.tsx
+ |- / ContactPage.tsx
+
+ /pages/home
+ /pages/contact
 ```
 
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.0.7. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+Esto es muy similar a como maneja el routing en nextjs basandose en la estructuras de carpetas nombra sus rutas

@@ -1,11 +1,19 @@
 {
   "name": "04-fs-routing",
-  "module": "index.ts",
+  "module": "server.tsx",
   "type": "module",
+  "scripts": {
+    "dev": "bun run --watch server.tsx"
+  },
   "devDependencies": {
+    "@types/react-dom": "^18.2.14",
     "bun-types": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "react-dom": "^18.2.0",
+    "react-dom/server": "react-dom/server"
   }
 }
