@@ -16,9 +16,4 @@ Esta sera una aplicacción que se renderiza del lado cliente.
 - [x]  Guardar el codigo html dentro de un archivo, para que tailwind pueda verlo y procesar las clases.Utilizando Bun.file le vamos a indicar de donde va a obtener el index.html en este caso de front/views.
 - [x] Incluir el archivo css en mi archivo index.html para leer los estilos.
 - [x] Servir el archivo css desde mi servidor.
-- [ ] Incluir en el bunler DOM API.Para poder obtener los valores y tipos basicos del DOM.
-
-**Cliente**
-
-- [ ] Renderizar columnas en mi page.
-- [ ]
+- [x] Incluir en el bunler DOM API en el tsconfig.Para poder obtener los valores y tipos basicos del DOM.

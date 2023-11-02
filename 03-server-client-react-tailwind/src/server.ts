@@ -12,10 +12,8 @@ Bun.serve({
         });
       }
       /* Js */
-      console.log(url.pathname,'asdasd')
       if (url.pathname === "/assets/main.js") {
         // Devolvemos el archivo crm.js
-        console.log('entro')
         return new Response(Bun.file("./public/main.js"), {});
       }
 

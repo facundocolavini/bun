@@ -16,7 +16,7 @@ var __toESM = (mod, isNodeMode, target) => {
 };
 var __commonJS = (cb, mod) => () => (mod || cb((mod = { exports: {} }).exports, mod), mod.exports);
 
-// /home/facundoc/proyects/bun/03-server-react/node_modules/react/cjs/react.development.js
+// /home/facundoc/proyects/bun/03-server-client-react-tailwind/node_modules/react/cjs/react.development.js
 var require_react_development = __commonJS((exports, module) => {
   if (true) {
     (function() {
@@ -1800,7 +1800,7 @@ var require_react_development = __commonJS((exports, module) => {
   }
 });
 
-// /home/facundoc/proyects/bun/03-server-react/node_modules/react/index.js
+// /home/facundoc/proyects/bun/03-server-client-react-tailwind/node_modules/react/index.js
 var require_react = __commonJS((exports, module) => {
   var react_development = __toESM(require_react_development(), 1);
   if (false) {
@@ -1809,7 +1809,7 @@ var require_react = __commonJS((exports, module) => {
   }
 });
 
-// /home/facundoc/proyects/bun/03-server-react/node_modules/scheduler/cjs/scheduler.development.js
+// /home/facundoc/proyects/bun/03-server-client-react-tailwind/node_modules/scheduler/cjs/scheduler.development.js
 var require_scheduler_development = __commonJS((exports) => {
   if (true) {
     (function() {
@@ -2255,7 +2255,7 @@ var require_scheduler_development = __commonJS((exports) => {
   }
 });
 
-// /home/facundoc/proyects/bun/03-server-react/node_modules/scheduler/index.js
+// /home/facundoc/proyects/bun/03-server-client-react-tailwind/node_modules/scheduler/index.js
 var require_scheduler = __commonJS((exports, module) => {
   var scheduler_development = __toESM(require_scheduler_development(), 1);
   if (false) {
@@ -2264,7 +2264,7 @@ var require_scheduler = __commonJS((exports, module) => {
   }
 });
 
-// /home/facundoc/proyects/bun/03-server-react/node_modules/react-dom/cjs/react-dom.development.js
+// /home/facundoc/proyects/bun/03-server-client-react-tailwind/node_modules/react-dom/cjs/react-dom.development.js
 var require_react_dom_development = __commonJS((exports) => {
   var React = __toESM(require_react(), 1);
   var Scheduler = __toESM(require_scheduler(), 1);
@@ -22574,7 +22574,7 @@ var require_react_dom_development = __commonJS((exports) => {
   }
 });
 
-// /home/facundoc/proyects/bun/03-server-react/node_modules/react-dom/index.js
+// /home/facundoc/proyects/bun/03-server-client-react-tailwind/node_modules/react-dom/index.js
 var require_react_dom = __commonJS((exports, module) => {
   var react_dom_development = __toESM(require_react_dom_development(), 1);
   if (false) {
@@ -22583,7 +22583,7 @@ var require_react_dom = __commonJS((exports, module) => {
   }
 });
 
-// /home/facundoc/proyects/bun/03-server-react/node_modules/react-dom/client.js
+// /home/facundoc/proyects/bun/03-server-client-react-tailwind/node_modules/react-dom/client.js
 var require_client = __commonJS((exports) => {
   var m = __toESM(require_react_dom(), 1);
   if (false) {
@@ -22616,7 +22616,7 @@ var client = __toESM(require_client(), 1);
 // src/App.tsx
 var import_react = __toESM(require_react(), 1);
 var App = () => {
-  return import_react.default.createElement("div", null, "asda");
+  return import_react.default.createElement("div", null, "Hola");
 };
 var App_default = App;
 

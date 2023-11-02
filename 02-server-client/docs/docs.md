@@ -36,9 +36,3 @@ Compilar todos los archivos con:
  o 
  bun run front
 ```
-
-
-
-## Build base.ts
-
-El archivo base tiene algunas utilidades que puedo usar en cualquier otro archivo lo que estas son funciones fundamentales.
