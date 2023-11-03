@@ -1,0 +1,15 @@
+{
+  "name": "07-macros",
+  "module": "src/index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/marked": "^6.0.0",
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "marked": "^9.1.5"
+  }
+}

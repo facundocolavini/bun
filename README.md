@@ -299,3 +299,15 @@ Bun admite archivos .jsx y .tsx de forma predeterminada. El transpilador interno
 - **jsxFactory**: El nombre de función utilizado para representar las construcciones JSX. El valor predeterminado es "createElement". Esto es útil para bibliotecas como Preact que utilizan un nombre de función diferente ("h").
 - **jsxFragmentFactory**: El nombre de la función utilizado para representar fragmentos JSX como <>Hello</>; solo aplicable cuando jsx es react. El valor predeterminado es "Fragment".
 - **jsxImportSource**: El módulo desde el cual se importará la función del fabricante de componentes (createElement, jsx, jsxDEV, etc.). El valor predeterminado es "react". Esto será necesario normalmente al utilizar una biblioteca de componentes como Preact.
+
+
+
+# Macros
+
+Las macros son funciones de JavaScript que se ejecutan en el momento de compilación en lugar de ejecutarse en el momento de ejecución.
+Entonces gracias a la macro podemos inyectar codigo en  nuestro codigo de compilación.
+
+# API Rest con Elysia 
+
+Elysia es un framework web centrado en el rendimiento, que se enfoca en Bun y aprovecha al máximo las APIs de HTTP, sistema de archivos y recarga en caliente de Bun.
+Es un marco de servidor completo con una sintaxis similar a Express, inferencia de tipos, middleware, carga de archivos y complementos para autenticación JWT, tRPC y más. 
