@@ -41,3 +41,22 @@ Renombrar el archivo  __.env.template__ a __.env__ y configurar las variables de
     bun run dev          // Ejecución en modo desarrollo
     bun run build        // Para hacer un build de nuestra api
 ```
+
+```
+📁 src
+|__ 📁 controllers
+|   ├── static-data.controller.ts
+|   |__ users.controller.ts
+|__ 📁 database
+|   |__ db.setup.ts
+|__ 📁 entities
+|   |__ user.schema.ts
+|__ 📁 startup
+|   ├── docs.ts
+|   ├── hooks.ts
+|   |__ security.ts
+📁 test
+    |__ users.test.ts
+.env
+package.json
+```
