@@ -1,14 +1,15 @@
 import { Elysia } from 'elysia';
 import { db } from '../db';
-import { userRoute } from './modules/users/routes/user.routes';
+import { userController } from './modules/users/controller/user.controller';
 
 
 const bootstrap = async () => {
 	await db.connectDB();
 	const app = new Elysia()
-		.use(userRoute)
+	
+		.use(userController)
 		.get('/', () => 'API Rest')
-		.listen(8080)
+		.listen(process.env.PORT || 8080)
 
 	console.log(`🦊 Elysia is running at on port ${app?.server?.port}...`)
 }

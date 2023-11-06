@@ -4,7 +4,7 @@ import { User } from "../../../interface";
 import UserModel from "../schema";
 
 /** 
- * Controlador para el manejo de los usuarios
+ * Models para el manejo de los usuarios
  * @params req 
  */
 
@@ -115,7 +115,7 @@ export const deleteRegister = async (req: Context) => {
 
 
 
-export const userController = {
+export const userModel = {
     getAll,
     getById,
     insertRegister,

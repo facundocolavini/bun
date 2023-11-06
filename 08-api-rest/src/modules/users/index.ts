@@ -1,3 +1,3 @@
-export * from './controller';
-export * from './routes/user.routes';
+export * from './controller/user.controller';
+export * from './model';
 export { default as schema } from './schema';
