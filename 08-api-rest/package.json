@@ -1,9 +1,10 @@
 {
   "name": "08-api-rest",
-  "module": "src/index.ts",
+  "module": "index.ts",
   "type": "module",
   "scripts": {
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch ./src/index.ts",
+    "build": "bun build --target=bun ./src/index.ts --outfile=server.js"
   },
   "devDependencies": {
     "bun-types": "latest"

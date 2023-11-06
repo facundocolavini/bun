@@ -1,15 +1,43 @@
 # 08-api-rest
 
-To install dependencies:
+Esta es una API Rest realizada con las siguientes tecnologias :
+
+- Bun
+- Elisya
+- Typescript
+
+## Instalación de dependencias
 
 ```bash
-bun install
+    cd /08-api-rest
+    bun install //  Instalamos todas las dependencias
 ```
 
-To run:
+## Configuración de base de datos
 
-```bash
-bun run index.ts
+Para correr localmente, se necesita la base de datos para eso se debe ejecutar con:
+
+Mongodb Url puede ser con mongo atlas o de forma local :
+
+```ts
+    // Ejemplo: 
+
+    //Local
+    mongodb://localhost:27017/nombre_de_tu_base
+    
+    // Con MongoDb atlas:
+    mongodb+srv://nombre:clave@cluster0.rzspxqi.mongodb.net/nombre_de_tu_base?retryWrites=true&w=majority
 ```
 
-This project was created using `bun init` in bun v1.0.7. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+Para visualizar mejor nuestra colecciones podemos utilizar MongoDB Compass.
+
+## Configurar las variables de entorno
+
+Renombrar el archivo  __.env.template__ a __.env__ y configurar las variables de entorno.
+
+## Comandos de consola
+
+```js
+    bun run dev          // Ejecución en modo desarrollo
+    bun run build        // Para hacer un build de nuestra api
+```
